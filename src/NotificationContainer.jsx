@@ -19,7 +19,7 @@ var NotificationContainer = createReactClass({
     this._style = this.props.getStyles.container(this.props.position);
 
     if (this.props.getStyles.overrideWidth && (this.props.position === Constants.positions.tc || this.props.position === Constants.positions.bc)) {
-      this._style.marginLeft = -(this.props.getStyles.overrideWidth / 2);
+      this._style.marginLeft = -(parseInt(this.props.getStyles.overrideWidth, 10) / 2);
     }
   },
 
